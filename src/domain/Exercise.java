@@ -10,28 +10,26 @@ package domain;
  * @author Надюха
  */
 public class Exercise {
-
+/**
+ * This method checks your number as Armstrong number.
+ * @return the value of the number and the results of the check
+ */
    public static int Calculate() {
     
-       /**
-        * formula for calculating the Armstrong number
-        */
-    int num = 548;
-    int temp = num;
-    int res, summa = 0;
-    while(num > 0){
-        res = num % 10;
-       num = num / 10;
-        summa = summa +  res*res*res;   
-    }
-    /**
-     * checking numbers as armstrong numbers
-     * if the number meets the condition, we get a confirmation
-     */
-    if(temp != summa)
-        System.out.println("This number is not Armstrong number");
-    else 
-        System.out.println("Its an Armstrong number");
-    return temp ;
-}
+    int n = 153, sum = 0, Arm = n, rem, digits = 0;
+    while (n != 0) {
+         digits++;
+         n = n/10;
+      }
+      while (n != 0) {
+         rem = n%10;
+         sum = sum + digits*digits*digits;
+         n = n/10;
+      }
+      if (Arm == sum) 
+          System.out.println("Armstrong number"); 
+       else 
+       System.out.println("NOT Armstrong number"); 
+          return Arm;
+   }
 }

@@ -7,10 +7,12 @@ import domain.Exercise;
  * @author Надюха
  */
 public class TestResult {
-    public static void main(String[] args) {
-/**
+    /**
  * print the result to the screen
+     * @param args
  */
-        System.out.println("Your number: " + Exercise.Calculate()); 
+    public static void main(String[] args) {
+
+        System.out.println("Your number is: " + Exercise.Calculate()); 
     }
 }
